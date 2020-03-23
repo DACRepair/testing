@@ -3,7 +3,7 @@ from datetime import timedelta
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 
-dag = DAG('Test DAG', "A dummy test DAG", schedule_interval=timedelta(minutes=5))
+dag = DAG('TestDAG', "A dummy test DAG", schedule_interval=timedelta(minutes=5))
 
 test1 = DummyOperator(task_id="test 1", dag=dag)
 test2 = DummyOperator(task_id="test 2", dag=dag)
